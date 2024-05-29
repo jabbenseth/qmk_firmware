@@ -166,16 +166,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     */
 	[NEO_3] = LAYOUT(
         // Number Row
-        KC_TRNS,               KC_NO,                 KC_NO,                KC_NO,                      NEO2_L3_RSAQUO,             NEO2_L3_LSAQUO,
-        NEO2_L3_CENT,          NEO2_L3_YEN,           NEO2_L3_SBQUO,        NEO2_L3_LEFT_SINGLE_QUOTE,  NEO2_L3_RIGHT_SINGLE_QUOTE, KC_TRNS,
+        KC_TRNS,                KC_F1,                KC_F2,                KC_F3,                      KC_F4,                      KC_F5,
+        KC_F6,                  KC_F7,                KC_F8,                KC_F9,                      KC_F10,                     KC_F11,
 
         // Main Block:warn("%s");
         //Left
         KC_TRNS,               NEO2_L3_ELLIPSIS,      NEO2_L3_UNDERSCORE,    NEO2_L3_LBRACKET,          NEO2_L3_RBRACKET,           NEO2_L3_CIRCUMFLEX,
-        NEO2_L3_EXCLAMATION,   NEO2_L3_LESSTHAN,      NEO2_L3_GREATERTHAN,   NEO2_L3_EQUAL,             NEO2_L3_AMPERSAND,          KC_NO,
+        NEO2_L3_EXCLAMATION,   NEO2_L3_LESSTHAN,      NEO2_L3_GREATERTHAN,   NEO2_L3_EQUAL,             NEO2_L3_AMPERSAND,          KC_F12,
         // Center
         KC_TRNS,               NEO2_L3_BSLASH,        NEO2_L3_SLASH,         NEO2_L3_CLBRACKET,         NEO2_L3_CRBRACKET,          NEO2_L3_ASTERISK,
-        NEO2_L3_QUESTIONMARK,  NEO2_L3_LPARENTHESES,  NEO2_L3_RPARENTHESES,  NEO2_L3_HYPHEN_MINUS,      NEO2_L3_COLON,              KC_AT,
+        NEO2_L3_QUESTIONMARK,  NEO2_L3_LPARENTHESES,  NEO2_L3_RPARENTHESES,  NEO2_L3_HYPHEN_MINUS,      NEO2_L3_COLON,              DE_AT,
         // Bottom
         KC_TRNS,               NEO2_L3_HASH,          NEO2_L3_DOLLAR,        NEO2_L3_PIPE,              NEO2_L3_TILDE,              NEO2_L3_BACKTICK,
         KC_RCBR, KC_TRNS,
