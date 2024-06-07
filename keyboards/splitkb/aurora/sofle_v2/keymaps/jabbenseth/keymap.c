@@ -143,10 +143,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,     NEO2_1,   NEO2_2,  NEO2_3,  NEO2_4,  NEO2_5,                  NEO2_6, NEO2_7,  NEO2_8,     NEO2_9,   NEO2_0, KC_BSPC,
         // Main Block
         KC_TAB,     DE_X,     DE_V,    DE_L,    DE_C,    DE_W,                    DE_K,   DE_H,    DE_G,       DE_F,     DE_Q,   NEO2_SHARP_S,
-        NEO2_LMOD3,  DE_U,     DE_I,    DE_A,    DE_E,    DE_O,                    DE_S,   DE_N,    DE_R,       DE_T,     DE_D,   DE_Y,
+        //NEO2_LMOD3, DE_U,     DE_I,    DE_A,    DE_E,    DE_O,                    DE_S,   DE_N,    DE_R,       DE_T,     DE_D,   NEO2_RMOD3, //DE_Y ,//NEO2_RMOD3,
+        //NEO2_LMOD3, DE_U,     DE_I,    DE_A,    DE_E,    DE_O,                    DE_S,   DE_N,    DE_R,       DE_T,     DE_D,   DE_Y ,//NEO2_RMOD3,
+        NEO2_LMOD3, DE_U,     DE_I,    DE_A,    DE_E,    DE_O,                    DE_S,   DE_N,    DE_R,       DE_T,     DE_D,   LT(NEO_3, DE_Y) ,//NEO2_RMOD3,
         KC_LSFT,    DE_UDIA,  DE_ODIA, DE_ADIA, DE_P,    DE_Z,  KC_MUTE, KC_MPLY, DE_B,   DE_M,    NEO2_COMMA, NEO2_DOT, DE_J,   KC_RSFT,
         // Bottom Row
-                             KC_LGUI,  KC_LALT, KC_LCTL, NEO2_LMOD4, KC_ENT,  KC_SPC,  NEO2_LMOD3,  KC_RCTL, KC_RALT,    KC_RGUI),
+                             KC_LGUI,  KC_LALT, KC_LCTL, NEO2_LMOD4, KC_ENT,  KC_SPC,  NEO2_RMOD3,  KC_RCTL, KC_RALT,    KC_RGUI),
 
     /* NEO_3: Symbol layer
     *
