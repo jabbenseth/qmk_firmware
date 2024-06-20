@@ -148,7 +148,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         NEO2_LMOD3, DE_U,     DE_I,    DE_A,    DE_E,    DE_O,                    DE_S,   DE_N,    DE_R,       DE_T,     DE_D,   LT(NEO_3, DE_Y) ,//NEO2_RMOD3,
         KC_LSFT,    DE_UDIA,  DE_ODIA, DE_ADIA, DE_P,    DE_Z,  KC_MUTE, KC_MPLY, DE_B,   DE_M,    NEO2_COMMA, NEO2_DOT, DE_J,   KC_RSFT,
         // Bottom Row
-                             KC_LGUI,  KC_LALT, KC_LCTL, NEO2_LMOD4, KC_ENT,  KC_SPC,  NEO2_RMOD3,  KC_RCTL, KC_RALT,    KC_RGUI),
+                             KC_LGUI,  KC_LALT, KC_LCTL, NEO2_LMOD4, KC_ENT,  KC_SPC,  NEO2_RMOD4,  KC_RCTL, KC_RALT,    KC_RGUI),
 
     /* NEO_3: Symbol layer
     *
