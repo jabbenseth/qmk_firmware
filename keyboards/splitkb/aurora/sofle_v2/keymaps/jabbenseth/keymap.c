@@ -8,7 +8,7 @@
 #include "layers.h"
 
 // State bitmap to track which key(s) enabled NEO_3 layer
-static uint8_t neo3_state = 0;
+//static uint8_t neo3_state = 0;
 // State bitmap to track key combo for CAPSLOCK
 static uint8_t capslock_state = 0;
 
@@ -113,6 +113,7 @@ enum custom_keycodes {
 #define NEO2_L3_DOLLAR               DE_DLR                      // $
 #define NEO2_L3_EN_DASH              RALT(DE_MINS)               // –
 #define NEO2_L3_EM_DASH              RSA(DE_MINS)                // —
+#define NEO2_L3_EURO                 RALT(DE_E)
 
 /* THIS FILE WAS GENERATED!
  *
@@ -143,9 +144,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,     NEO2_1,   NEO2_2,  NEO2_3,  NEO2_4,  NEO2_5,                  NEO2_6, NEO2_7,  NEO2_8,     NEO2_9,   NEO2_0, KC_BSPC,
         // Main Block
         KC_TAB,     DE_X,     DE_V,    DE_L,    DE_C,    DE_W,                    DE_K,   DE_H,    DE_G,       DE_F,     DE_Q,   NEO2_SHARP_S,
-        //NEO2_LMOD3, DE_U,     DE_I,    DE_A,    DE_E,    DE_O,                    DE_S,   DE_N,    DE_R,       DE_T,     DE_D,   NEO2_RMOD3, //DE_Y ,//NEO2_RMOD3,
-        //NEO2_LMOD3, DE_U,     DE_I,    DE_A,    DE_E,    DE_O,                    DE_S,   DE_N,    DE_R,       DE_T,     DE_D,   DE_Y ,//NEO2_RMOD3,
-        NEO2_LMOD3, DE_U,     DE_I,    DE_A,    DE_E,    DE_O,                    DE_S,   DE_N,    DE_R,       DE_T,     DE_D,   LT(NEO_3, DE_Y) ,//NEO2_RMOD3,
+        MO(NEO_3), DE_U,     DE_I,    DE_A,    DE_E,    DE_O,                    DE_S,   DE_N,    DE_R,       DE_T,     DE_D,   LT(NEO_3, DE_Y) ,//NEO2_RMOD3,
         KC_LSFT,    DE_UDIA,  DE_ODIA, DE_ADIA, DE_P,    DE_Z,  KC_MUTE, KC_MPLY, DE_B,   DE_M,    NEO2_COMMA, NEO2_DOT, DE_J,   KC_RSFT,
         // Bottom Row
                              KC_LGUI,  KC_LALT, KC_LCTL, NEO2_LMOD4, KC_ENT,  KC_SPC,  NEO2_RMOD4,  KC_RCTL, KC_RALT,    KC_RGUI),
@@ -155,7 +154,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     * ,--------------------------------------------                  ,-------------------------------------------.
     * |  ----  | ---- | ---- | ---- |   ›  |   ‹  |                  |   ¢ 	|   ¥  |   ‚  |   ‘  |   ’  |  ----  |
     * |--------+------+------+------+------+-------                  |------+------+------+------+------+--------|
-    * |  ----  |   …  |   _  |   [  |   ]  |   ^  |                  |   !  |   <  |   >  |   =  |   &  |  ----  |
+    * |   deg  |   …  |   _  |   [  |   ]  |   ^  |                  |   !  |   <  |   >  |   =  |   &  |  ----  |
     * |--------+------+------+------+------+------|                  |------+------+------+------+------+--------|
     * |        |   \  |   /  |   {  |   }  |   *  |------.    ,------|   ?  |   (  |   )  |   -  |   :  |   @    |
     * |--------+------+------+------+------+------|      |    |      |------+------+------+------+------+--------|
@@ -173,14 +172,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         // Main Block:warn("%s");
         //Left
-        KC_TRNS,               NEO2_L3_ELLIPSIS,      NEO2_L3_UNDERSCORE,    NEO2_L3_LBRACKET,          NEO2_L3_RBRACKET,           NEO2_L3_CIRCUMFLEX,
+        S(DE_CIRC),            NEO2_L3_ELLIPSIS,      NEO2_L3_UNDERSCORE,    NEO2_L3_LBRACKET,          NEO2_L3_RBRACKET,           NEO2_L3_CIRCUMFLEX,
         NEO2_L3_EXCLAMATION,   NEO2_L3_LESSTHAN,      NEO2_L3_GREATERTHAN,   NEO2_L3_EQUAL,             NEO2_L3_AMPERSAND,          KC_F12,
         // Center
-        KC_TRNS,               NEO2_L3_BSLASH,        NEO2_L3_SLASH,         NEO2_L3_CLBRACKET,         NEO2_L3_CRBRACKET,          NEO2_L3_ASTERISK,
+        RALT(DE_E),             NEO2_L3_BSLASH,        NEO2_L3_SLASH,         NEO2_L3_CLBRACKET,         NEO2_L3_CRBRACKET,          NEO2_L3_ASTERISK,
         NEO2_L3_QUESTIONMARK,  NEO2_L3_LPARENTHESES,  NEO2_L3_RPARENTHESES,  NEO2_L3_HYPHEN_MINUS,      NEO2_L3_COLON,              DE_AT,
         // Bottom
         KC_TRNS,               NEO2_L3_HASH,          NEO2_L3_DOLLAR,        NEO2_L3_PIPE,              NEO2_L3_TILDE,              NEO2_L3_BACKTICK,
-        KC_RCBR, KC_TRNS,
+        KC_F20, KC_F20,
         NEO2_L3_PLUS,          NEO2_L3_PERCENT,       NEO2_L3_DOUBLE_QUOTE,  NEO2_L3_SINGLE_QUOTE,      NEO2_L3_SEMICOLON, KC_NO,
 
          KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS, KC_TRNS,       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS),
@@ -403,13 +402,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     case NEO2_LMOD3:
       if (record->event.pressed) {
         layer_on(NEO_3);
-        neo3_state |= (1 << 1);
+        // neo3_state |= (1 << 1);
       } else {
         // Turn off NEO_3 layer unless it's enabled through NEO2_RMOD3 as well.
-        if ((neo3_state & ~(1 << 1)) == 0) {
+
+        // if ((neo3_state & ~(1 << 1)) == 0) {
           layer_off(NEO_3);
-        }
-        neo3_state &= ~(1 << 1);
+        //}
+        //neo3_state &= ~(1 << 1);
       }
       break;
   }
